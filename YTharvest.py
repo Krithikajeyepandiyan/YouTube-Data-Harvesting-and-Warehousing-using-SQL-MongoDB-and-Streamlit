@@ -154,10 +154,6 @@ def get_Playlist_details(channel_id):
 client = pymongo.MongoClient("mongodb+srv://krithika:Guvi2024@cluster0.kmifik0.mongodb.net/")
 db = client["Youtube_Data"]
 
-# def channel_exists(channel_id):
-#     col = db["Channel_Details"]
-#     return col.find_one({"channel_Information.Channel_ID": channel_id})
-
 def get_channel_details(channel_id):
 
         ch_details = get_channel(channel_id)
@@ -429,8 +425,6 @@ def migrate_to_sql(selected_channel):
     comment_tables(selected_channel)
     
     return "Table created successfully"
-
-
 
 # =========================================================================
 # Function to create display channel table in PostgreSQL
